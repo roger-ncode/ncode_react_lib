@@ -2,7 +2,11 @@ import { Inject } from "./di/Inject";
 import { ServiceLocator } from "./di/ServiceLocator";
 import { NCNetwork } from "./IO/network/NCNetwork";
 import { NCNetworkException } from "./IO/network/NCNetworkException";
-import { NCNetworking, NCNetworkingClassName, NCNetworkMethod } from "./IO/network/NCNetworking";
+import {
+  NCNetworking,
+  NCNetworkingClassName,
+  NCNetworkMethod,
+} from "./IO/network/NCNetworking";
 import { NCNetworkResponse } from "./IO/network/NCNetworkResponse";
 import { MemoryStorage } from "./IO/persistant/MemoryStorage";
 import { NCCache } from "./IO/persistant/NCCache";
@@ -12,7 +16,10 @@ import {
   NCStorage,
   NCStorageClassName,
 } from "./IO/persistant/NCStorage";
-import { NCApplicationConfiguration } from "./NCApplicationConfiguration";
+import {
+  NCApplicationConfiguration,
+  NCDefaultApplicationConfiguration,
+} from "./NCApplicationConfiguration";
 import { NCApplicationContext } from "./NCApplicationContext";
 import { Center, HStack, Spacer, VStack, ZStack } from "./ui/DesignSupports";
 import { JSDateDating } from "./utils/date/JSDateDating";
@@ -25,11 +32,10 @@ import { NCOptional } from "./utils/NCOptional";
 export {
   NCApplicationContext,
   NCApplicationConfiguration,
-  
+  NCDefaultApplicationConfiguration,
   // di
   ServiceLocator,
   Inject,
-
   // network
   NCNetwork,
   NCNetworking,
@@ -37,7 +43,6 @@ export {
   NCNetworkMethod,
   NCNetworkException,
   NCNetworkResponse,
-
   // persistance
   NCInstantStorageClassName,
   NCStorageClassName,
@@ -45,14 +50,12 @@ export {
   NCCache,
   NCPersistance,
   NCStorage,
-
   // ui
   VStack,
   HStack,
   ZStack,
   Center,
   Spacer,
-
   // utils
   NCDate,
   NCDating,

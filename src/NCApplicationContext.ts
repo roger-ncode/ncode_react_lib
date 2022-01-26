@@ -1,4 +1,4 @@
-import { NCApplicationConfiguration } from "./NCApplicationConfiguration";
+import { NCApplicationConfiguration, NCDefaultApplicationConfiguration } from "./NCApplicationConfiguration";
 import { ServiceLocator } from "./di/ServiceLocator";
 import { NCLog, NCLogLevel } from "./utils/NCLog";
 import { NCDatingClassName } from "./utils/date/NCDating";
@@ -34,10 +34,11 @@ export class NCApplicationContext {
   private _modeDev = false;
   private _serviceLocator: ServiceLocator;
 
-  private constructor(configuration: NCApplicationConfiguration) {
+  private constructor(configuration: NCApplicationConfiguration = new NCDefaultApplicationConfiguration()) {
     this._serviceLocator = new ServiceLocator();
 
     this.initDefaults();
+    configuration.application(this);
     configuration.config(this._serviceLocator);
   }
 
