@@ -1,10 +1,8 @@
-# npm
 node_modules/
-
-# dev
 src
+.git
 .gitignore
 tsconfig.json
-
-# GIT
-.git
+tslint.json
+yarn.lock
+.prettier.rc

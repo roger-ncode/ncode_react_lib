@@ -1,19 +1,27 @@
 {
-  "name": "ncode_react_lib",
-  "version": "0.1.0",
+  "name": "@ncodedcode/ncode_react_lib",
+  "version": "0.1.6",
+  "private": false,
   "description": "ncode react application context library",
   "author": "iamchiwon@itsdcode.com",
   "keywords": [
-    "ncode", "dcode", "react", "architecture"
+    "ncode",
+    "dcode",
+    "react",
+    "architecture"
   ],
   "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rm -rf ./dist",
-    "build": "yarn clean && tsc"
+    "build": "yarn clean && tsc",
+    "prepare": "yarn build"
   },
   "devDependencies": {
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "typescript": "^4.5.5"

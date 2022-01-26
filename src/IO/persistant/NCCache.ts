@@ -1,11 +1,10 @@
+import { Inject } from "../../di/Inject";
+import { NCJsonSerializer } from "../../utils/NCJsonSerializer";
 import {
   NCInstantStorageClassName,
   NCStorage,
   NCStorageClassName,
 } from "./NCStorage";
-import { Inject } from "../../di/Inject";
-import { NCJsonSerializer } from "../../utils/NCJsonSerializer";
-import { NCLog } from "../../utils/NCLog";
 
 class DataRecord<T> {
   data: T;
