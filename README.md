@@ -12,9 +12,9 @@ yarn add @ncodedcode/ncode_react_lib
 
 ```typescript
 import React from "react";
-import { NCApplicationContext } from "@ncodedcode/ncode_react_lib";
 
-NCApplicationContext.createContext(); // add line
+// add this
+NCApplicationContext.createContext(new NCDefaultApplicationConfiguration()); 
 
 ReactDOM.render(
   <React.StrictMode>
@@ -39,6 +39,12 @@ export class AppConfiguration implements NCApplicationConfiguration {
       // set up dependency injection
   }
 }
+```
+
+- init Context with Custom Configuration
+
+```typescript
+NCApplicationContext.createContext(new AppConfiguration());
 ```
 
 ### Use LocalStorage as a default NCStorage
@@ -119,6 +125,11 @@ export class AppConfiguration implements NCApplicationConfiguration {
   }
 }
 ```
+
+# TO-DO
+
+[ ] Default FetchNetworking  
+[ ] NCNetwork.setBaseUrl
 
 # Example Project
 
